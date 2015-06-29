@@ -43,7 +43,16 @@ $(document).ready(function(){
 
 // popup notification
 $(document).ready(function(){
-    $("#popup-notification-trigger").on("click", function(){
-        $(".popup-notification").toggle();
+    $("#popup-notification-trigger").on("click", function(event){
+        event.stopPropagation();
+        $(".popup-notification-wrapper").toggle();
+    });
+
+    $(".popup-notification-wrapper").on("click", function(event){
+        event.stopPropagation();
+    });
+
+    $(document).on("click", function(){
+        $(".popup-notification-wrapper").hide();
     });
 });

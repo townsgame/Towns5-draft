@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<iframe src="https://towns.cz/onlymap" width="100%" height="100%" frameborder="0"></iframe>
+<!--<iframe src="https://towns.cz/onlymap" width="100%" height="100%" frameborder="0"></iframe>-->
 
     <nav class="menu">
         <div class="menu-logo">
@@ -133,15 +133,21 @@
         <div class="popup-story-close"><img src="img/close-white.png" alt=""/></div>
     </div>
 
-    <div class="popup-notification">
-        <div class="popup-notification-arrow"></div>
-        <div class="popup-notification-content">
-            <div class="popup-notification-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam autem consequatur debitis odio odit tempore? Accusantium alias aspernatur aut excepturi inventore iste laudantium mollitia nihil, quibusdam rem rerum sunt?</div>
-            <div class="popup-notification-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consectetur cumque delectus doloremque ipsam, ipsum laudantium magnam minima nostrum quae saepe voluptate voluptatibus? At consectetur dicta eum fuga, quae quia.</div>
-            <div class="popup-notification-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus exercitationem, illum impedit quidem rem saepe tempore temporibus? A doloremque hic illum laboriosam nulla quasi sed? Doloremque dolores enim optio voluptatibus?</div>
-            <div class="popup-notification-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet commodi expedita fugit harum illo in magnam obcaecati sequi! Aut consequatur dolorum illo iusto magnam numquam optio quae saepe sapiente vel?</div>
-            <div class="popup-notification-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est fugit id nisi omnis quasi repudiandae sunt tenetur voluptate voluptatibus. Aspernatur cumque enim est molestiae optio, sequi suscipit veniam voluptas!</div>
-        </div>
+
+
+
+    <div class="popup-notification-wrapper">
+        <aside></aside>
+        <header></header>
+        <section>
+            <p>Lorem ipsum dolor sit amet, consectetcati officia porro provident quaerat repellat sequi, ullam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, alias, atque deleniti doloribus esse eum hic nihil, officia optio pariatur placeat quam quasi quod recusandae repudiandae sapiente sint tempora vitae!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus archod repudiandae sit ullamod repudiandae sit ullamod repudiandae sit ullamitecto assumenda, cum debitis dolorem et itaque possimus recusandae reprehenderit voluptatibus. Aspernatur autem cum dolore illo odio rem repudiandae tempora voluptatibus.</p>
+            <p>Lorem ipsum dolor sit estiae neque odio odit quam, quas qui qu veritaatibus soluta.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam, aut blanditiis cumque dicta ex optio quasi recusandae? Dolorem, praesentium, tenetur! Assumenda esse et expedita labore libero provident, saepe tempore.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut commodi, cum cupiditate delectus dolorum eos fugiat ipsum labore laborum libero magni nemo obcaecati quae quibusdam rem sed tempora vel!</p>
+        </section>
+        <footer><a href="#">Všetky notifikácie</a></footer>
     </div>
 
 </body>

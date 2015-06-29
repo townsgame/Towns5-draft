@@ -8,10 +8,10 @@ body, html {
     font-family: 'Roboto', sans-serif;
 }
 
-/*html {*/
-    /*background: url("map.png") no-repeat center center fixed;*/
-    /*background-size: cover;*/
-/*}*/
+html {
+    background: url("../img/map.png") no-repeat center center fixed;
+    background-size: cover;
+}
 
 .left {
     float: left;
@@ -392,43 +392,88 @@ iframe {
 
 /* POPUP NOTIFICATION ------------------------------------------------------------------------------------------------*/
 
-.popup-notification {
-    display: block;
+.popup-notification-wrapper {
+    display: none;
     z-index: 3;
     position: fixed;
-    top: 80px;
+    top: 55px;
     right: 5px;
-    width: 300px;
-    height: 400px;
-    background-color: black;
-    background-color: rgba(0, 0, 0, 0.85);
-    color: white;
+    width: 400px;
+    height: 500px;
+    color: black;
     padding: 10px;
-    border-radius: 3px;
     overflow: hidden;
-
 }
 
-.popup-notification-arrow {
-    position: absolute;
-    top: -10px;
-    right: 0;
+.popup-notification-wrapper aside {
+    margin-left: 275px;
     width: 0;
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid rgba(0,0,0,0.85);
+    border-bottom-width: 10px;
+    border-bottom-style: solid;
+    border-bottom-color: #ffffff;
+    /*border-bottom-color: rgba(255, 255, 255, 0.85);*/
 }
 
-.popup-notification-content {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    overflow-y: scroll;
+.popup-notification-wrapper header {
+    height: 9px;
+    line-height: 9px;
+    text-align: center;
+    color: #000000;
+    background-color: #fff;
+    /*background-color: rgba(255, 255, 255, 0.85);*/
+    border-bottom: 1px solid rgba(186, 186, 186, 0.85);
+
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.popup-notification-wrapper section {
     width: auto;
+    height: 460px;
+    box-sizing: border-box;
+    padding: 0;
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.85);
+    overflow-y: auto;
+}
+
+.popup-notification-wrapper section p {
     padding: 10px;
+    margin: 0 auto;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(186, 186, 186, 0.85);
+}
+
+.popup-notification-wrapper section p:last-of-type {
+    border: none;
+}
 
 
+.popup-notification-wrapper section p:hover {
+    background-color: #fff;
+}
+
+.popup-notification-wrapper footer {
+    height: 29px;
+    line-height: 29px;
+    text-align: center;
+    color: #000000;
+    background-color: #fff;
+    /*background-color: rgba(255, 255, 255, 0.85);*/
+    border-top: 1px solid rgba(186, 186, 186, 0.85);
+
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.popup-notification-wrapper footer a {
+    color: black;
+    text-decoration: none;
+}
+
+.popup-notification-wrapper footer a:hover {
+    text-decoration: underline;
 }
