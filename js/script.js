@@ -22,21 +22,28 @@ $(document).ready(function(){
     })
 });
 
-// popup
+// popup story
 $(document).ready(function(){
-    $("#popup-opener").on("click", function(){
+    $("#popup-story-trigger").on("click", function(){
         $(".overlay").show();
-        $(".popup").show();
+        $(".popup-story-wrapper").show();
     });
 
     $(".overlay").on("click", function(){
         $(this).hide();
-        $(".popup").hide();
+        $(".popup-story-wrapper").hide();
     });
 
-    $(".popup-close").on("click", function(){
+    $(".popup-story-close").on("click", function(){
         $(".overlay").hide();
-        $(".popup").hide();
+        $(".popup-story-wrapper").hide();
     });
 
+});
+
+// popup notification
+$(document).ready(function(){
+    $("#popup-notification-trigger").on("click", function(){
+        $(".popup-notification").toggle();
+    });
 });
