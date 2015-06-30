@@ -236,10 +236,14 @@ iframe {
     box-shadow: #0098ff 0 0 3px 0;
 }
 
-.js-popup-action-open,
-.js-popup-action-close {
-
+.action-wrapper.active .action {
+    box-shadow: #0098ff 0 0 3px 0; /* todo: nedať .active radšej na .action ??? */
 }
+
+/* POPUP ACTION ------------------------------------------------------------------------------------------------------*/
+
+.js-popup-action-open,
+.js-popup-action-close {}
 
 .popup-action {
     display: none;
@@ -250,11 +254,7 @@ iframe {
 }
 
 .action-wrapper.active .popup-action {
-    display: block;
-}
-
-.action-wrapper.active .action {
-    box-shadow: #0098ff 0 0 3px 0;
+    display: block; /* todo: nespraviť to radšej cez javascript ??? */
 }
 
 .popup-action .arrow {
@@ -332,9 +332,7 @@ iframe {
 /* POPUP STORY -------------------------------------------------------------------------------------------------------*/
 
 .js-popup-story-open,
-.js-popup-story-close {
-
-}
+.js-popup-story-close {}
 
 .popup-story {
     display: none;
@@ -392,11 +390,8 @@ iframe {
 
 /* POPUP NOTIFICATION ------------------------------------------------------------------------------------------------*/
 
-
 .js-popup-notification-open,
-.js-popup-notification-close {
-
-}
+.js-popup-notification-close {}
 
 .popup-notification {
     display: none;
@@ -450,6 +445,7 @@ iframe {
     padding: 10px;
     margin: 0 auto;
     cursor: pointer;
+    border-bottom: 1px solid #bababa;
     border-bottom: 1px solid rgba(186, 186, 186, 0.85);
 }
 
@@ -469,6 +465,7 @@ iframe {
     color: #000000;
     background-color: #fff;
     /*background-color: rgba(255, 255, 255, 0.85);*/
+    border-top: 1px solid #bababa;
     border-top: 1px solid rgba(186, 186, 186, 0.85);
 
     border-bottom-left-radius: 3px;
