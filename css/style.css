@@ -249,7 +249,7 @@ iframe {
     display: none;
     position: absolute;
     top: 0;
-    left: 60px;
+    left: 65px;
     width: 310px;
 }
 
@@ -264,14 +264,18 @@ iframe {
     height: 0;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    border-right: 10px solid rgba(0,0,0,0.85);
+    /*border-right: 10px solid rgba(0,0,0,0.85);*/
+    border-right: 10px solid rgba(255, 255, 255,0.85);
 }
 
 .popup-action .content {
     float: left;
-    background-color: black;
-    background-color: rgba(0,0,0,0.85);
-    color: lightgray;
+    /*background-color: black;*/
+    /*background-color: rgba(0,0,0,0.85);*/
+    /*color: lightgray;*/
+    background-color: white;
+    background-color: rgba(255, 255, 255,0.85);
+    color: black;
     border-radius: 3px;
     width: 300px;
 }
@@ -312,7 +316,8 @@ iframe {
     height: 20px;
     width: 20px;
     cursor: pointer;
-    background: url("../img/close-white.png") no-repeat center center /contain;
+    /*background: url("../img/close-white.png") no-repeat center center /contain;*/
+    background: url("../img/close-black.png") no-repeat center center /contain;
 }
 
 /* OVERLAY -----------------------------------------------------------------------------------------------------------*/
@@ -357,13 +362,17 @@ iframe {
     right: 0;
     padding: 0 10px;
     margin: 0;
-    height: 40px;
-    line-height: 40px;
+    height: 39px;
+    line-height: 39px;
     font-size: 18px;
-    color: white;
-    background-color: black;
-    background-color: rgba(0, 0, 0, 0.85);
+    /*color: white;*/
+    /*background-color: black;*/
+    /*background-color: rgba(0, 0, 0, 0.85);*/
+    color: black;
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.85);
     text-align: center;
+    border-bottom: 1px solid #bababa;
 }
 
 .popup-story .content {
@@ -385,7 +394,7 @@ iframe {
     height: 20px;
     width: 20px;
     cursor: pointer;
-    background: url("../img/close-white.png") no-repeat center center /contain;
+    background: url("../img/close-black.png") no-repeat center center /contain;
 }
 
 /* POPUP NOTIFICATION ------------------------------------------------------------------------------------------------*/
@@ -397,12 +406,11 @@ iframe {
     display: none;
     z-index: 3;
     position: fixed;
-    top: 55px;
-    right: 5px;
+    top: 65px;
+    right: 15px;
     width: 400px;
     height: 500px;
     color: black;
-    padding: 10px;
     overflow: hidden;
 }
 
@@ -414,8 +422,8 @@ iframe {
     border-right: 10px solid transparent;
     border-bottom-width: 10px;
     border-bottom-style: solid;
-    border-bottom-color: #ffffff;
-    /*border-bottom-color: rgba(255, 255, 255, 0.85);*/
+    border-bottom-color: white;
+    border-bottom-color: rgba(255, 255, 255, 0.85);
 }
 
 .popup-notification .header {
@@ -424,8 +432,8 @@ iframe {
     text-align: center;
     color: #000000;
     background-color: #fff;
-    /*background-color: rgba(255, 255, 255, 0.85);*/
-    border-bottom: 1px solid rgba(186, 186, 186, 0.85);
+    background-color: rgba(255, 255, 255, 0.85);
+    border-bottom: 1px solid #bababa;
 
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
@@ -433,7 +441,7 @@ iframe {
 
 .popup-notification .content {
     width: auto;
-    height: 460px;
+    height: 440px;
     box-sizing: border-box;
     padding: 0;
     background-color: white;
@@ -441,12 +449,11 @@ iframe {
     overflow-y: auto;
 }
 
-.popup-notification .content p {
+.popup-notification .content p { /* todo: nespraviť z toho a ??? */
     padding: 10px;
     margin: 0 auto;
     cursor: pointer;
     border-bottom: 1px solid #bababa;
-    border-bottom: 1px solid rgba(186, 186, 186, 0.85);
 }
 
 .popup-notification .content p:last-of-type {
@@ -464,9 +471,8 @@ iframe {
     text-align: center;
     color: #000000;
     background-color: #fff;
-    /*background-color: rgba(255, 255, 255, 0.85);*/
+    background-color: rgba(255, 255, 255, 0.85);
     border-top: 1px solid #bababa;
-    border-top: 1px solid rgba(186, 186, 186, 0.85);
 
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
