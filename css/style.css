@@ -214,11 +214,11 @@ iframe {
     /*overflow-y: scroll;*/
 }
 
-.sidebar-action-wrapper {
+.action-wrapper {
     position: relative;
 }
 
-.sidebar-action-box {
+.action {
     margin: 5px;
     width: 50px;
     height: 50px;
@@ -228,15 +228,20 @@ iframe {
     cursor: pointer;
 }
 
-.sidebar-action-wrapper:nth-child(even) .sidebar-action-box {
+.action-wrapper:nth-child(even) .action {
     background-color: teal;
 }
 
-.sidebar-action-wrapper:hover .sidebar-action-box {
+.action:hover {
     box-shadow: #0098ff 0 0 3px 0;
 }
 
-.sidebar-action-popup {
+.js-popup-action-open,
+.js-popup-action-close {
+
+}
+
+.popup-action {
     display: none;
     position: absolute;
     top: 0;
@@ -244,15 +249,15 @@ iframe {
     width: 310px;
 }
 
-.sidebar-action-wrapper.active .sidebar-action-popup {
+.action-wrapper.active .popup-action {
     display: block;
 }
 
-.sidebar-action-wrapper.active .sidebar-action-box {
+.action-wrapper.active .action {
     box-shadow: #0098ff 0 0 3px 0;
 }
 
-.sidebar-action-arrow {
+.popup-action .arrow {
     float: left;
     margin-top: 20px;
     width: 0;
@@ -262,7 +267,7 @@ iframe {
     border-right: 10px solid rgba(0,0,0,0.85);
 }
 
-.sidebar-action-content {
+.popup-action .content {
     float: left;
     background-color: black;
     background-color: rgba(0,0,0,0.85);
@@ -272,20 +277,20 @@ iframe {
 }
 
 
-.sidebar-action-content h2,
-.sidebar-action-content p,
-.sidebar-action-content button {
+.popup-action .content h2,
+.popup-action .content p,
+.popup-action .content button {
     padding: 10px;
     margin: 0;
 }
 
-.sidebar-action-content h2 {
+.popup-action .content h2 {
     font-size: 20px;
     height: 20px;
     line-height: 20px;
 }
 
-.sidebar-action-content button {
+.popup-action .content button {
     border: none;
     display: block;
     padding: 0 10px;
@@ -300,19 +305,14 @@ iframe {
 
 }
 
-.sidebar-action-close {
+.popup-action .close {
     position: absolute;
     top: 10px;
     right: 10px;
     height: 20px;
     width: 20px;
     cursor: pointer;
-    /*background: url("close-white.png") no-repeat center fixed;*/
-}
-
-.sidebar-action-close img {
-    width: 20px;
-    height: 20px;
+    background: url("../img/close-white.png") no-repeat center center /contain;
 }
 
 /* OVERLAY -----------------------------------------------------------------------------------------------------------*/
@@ -331,7 +331,12 @@ iframe {
 
 /* POPUP STORY -------------------------------------------------------------------------------------------------------*/
 
-.popup-story-wrapper {
+.js-popup-story-open,
+.js-popup-story-close {
+
+}
+
+.popup-story {
     display: none;
     z-index: 10;
     position: fixed;
@@ -347,7 +352,7 @@ iframe {
     overflow: hidden;
 }
 
-.popup-story-header {
+.popup-story .header {
     position: absolute;
     top: 0;
     left: 0;
@@ -363,7 +368,7 @@ iframe {
     text-align: center;
 }
 
-.popup-story-content {
+.popup-story .content {
     position: absolute;
     top: 40px;
     bottom: 0;
@@ -375,24 +380,25 @@ iframe {
     background-color: white;
 }
 
-.popup-story-close {
+.popup-story .close {
     position: absolute;
     top: 10px;
     right: 10px;
     height: 20px;
     width: 20px;
     cursor: pointer;
-    /*background: url("close-white.png") no-repeat center fixed;*/
-}
-
-.popup-story-close img {
-    width: 20px;
-    height: 20px;
+    background: url("../img/close-white.png") no-repeat center center /contain;
 }
 
 /* POPUP NOTIFICATION ------------------------------------------------------------------------------------------------*/
 
-.popup-notification-wrapper {
+
+.js-popup-notification-open,
+.js-popup-notification-close {
+
+}
+
+.popup-notification {
     display: none;
     z-index: 3;
     position: fixed;
@@ -405,7 +411,7 @@ iframe {
     overflow: hidden;
 }
 
-.popup-notification-wrapper aside {
+.popup-notification .arrow {
     margin-left: 275px;
     width: 0;
     height: 0;
@@ -417,7 +423,7 @@ iframe {
     /*border-bottom-color: rgba(255, 255, 255, 0.85);*/
 }
 
-.popup-notification-wrapper header {
+.popup-notification .header {
     height: 9px;
     line-height: 9px;
     text-align: center;
@@ -430,7 +436,7 @@ iframe {
     border-top-right-radius: 3px;
 }
 
-.popup-notification-wrapper section {
+.popup-notification .content {
     width: auto;
     height: 460px;
     box-sizing: border-box;
@@ -440,23 +446,23 @@ iframe {
     overflow-y: auto;
 }
 
-.popup-notification-wrapper section p {
+.popup-notification .content p {
     padding: 10px;
     margin: 0 auto;
     cursor: pointer;
     border-bottom: 1px solid rgba(186, 186, 186, 0.85);
 }
 
-.popup-notification-wrapper section p:last-of-type {
+.popup-notification .content p:last-of-type {
     border: none;
 }
 
 
-.popup-notification-wrapper section p:hover {
+.popup-notification .content p:hover {
     background-color: #fff;
 }
 
-.popup-notification-wrapper footer {
+.popup-notification .footer {
     height: 29px;
     line-height: 29px;
     text-align: center;
@@ -469,11 +475,11 @@ iframe {
     border-bottom-right-radius: 3px;
 }
 
-.popup-notification-wrapper footer a {
+.popup-notification .footer a {
     color: black;
     text-decoration: none;
 }
 
-.popup-notification-wrapper footer a:hover {
+.popup-notification .footer a:hover {
     text-decoration: underline;
 }

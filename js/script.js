@@ -2,57 +2,65 @@
  * Created by matusko on 6/28/15.
  */
 
-// sidebar
+// popup action
 $(document).ready(function(){
-    var wrapper = $(".sidebar-action-wrapper");
 
-    wrapper.children(".sidebar-action-box").on("click", function(){
-        if ($(this).parent().hasClass("active")){
-            $(this).parent().removeClass("active");
+    // kliknutie na .js-popup-action-open trigger...
+    $(".js-popup-action-open").on("click", function(){
+        // ... pri kliknutí na práve otvorenú ponuku akcie odoberie .action-wrapper-u triedu .active
+        if ($(this).parent(".action-wrapper").hasClass("active")){
+            $(".action-wrapper").removeClass("active");
+
+        // ... pri kliknutí na neotvorenú ponuku akcie odstráni všetkým .action-wrapper prípadnú triedu .active, a pridá ju len tomu, na ktorý sme klikli
         } else {
-            $(wrapper).removeClass("active");
-            $(this).parent().addClass("active");
+            $(".action-wrapper").removeClass("active");
+            $(this).parent(".action-wrapper").addClass("active");
         }
     });
 
-    var close_button = $(".sidebar-action-close");
-
-    close_button.on("click", function(){
-        $(wrapper).removeClass("active");
-    })
+    // kliknutie na .js-popup-action-close trigger odoberie všetkým .action-wrapper triedu .active
+    $(".js-popup-action-close").on("click", function(){
+        $(".action-wrapper").removeClass("active");
+    });
 });
 
 // popup story
 $(document).ready(function(){
-    $("#popup-story-trigger").on("click", function(){
+
+    // kliknutie na js-popup-story-open trigger zobrazí overlay a popup-story
+    $(".js-popup-story-open").on("click", function(){
         $(".overlay").show();
-        $(".popup-story-wrapper").show();
+        $(".popup-story").show();
     });
 
+    // kliknutie na overlay schová overlay a popup-story
     $(".overlay").on("click", function(){
         $(this).hide();
-        $(".popup-story-wrapper").hide();
+        $(".popup-story").hide();
     });
 
-    $(".popup-story-close").on("click", function(){
+    // kliknutie na js-popup-story-close trigger schová overlay a popup-story
+    $(".js-popup-story-close").on("click", function(){
         $(".overlay").hide();
-        $(".popup-story-wrapper").hide();
+        $(".popup-story").hide();
     });
-
 });
 
 // popup notification
 $(document).ready(function(){
-    $("#popup-notification-trigger").on("click", function(event){
+    // kliknutie na js-popup-notification-open trigger zobrazí popup-notification
+    $(".js-popup-notification-open").on("click", function(event){
         event.stopPropagation();
-        $(".popup-notification-wrapper").toggle();
+        $(".popup-notification").toggle();
     });
 
-    $(".popup-notification-wrapper").on("click", function(event){
+    // kliknutie na otvorený popup-notification neurobí nič
+    $(".popup-notification").on("click", function(event){
         event.stopPropagation();
     });
 
+    // kliknutie na document schová popup-notification
     $(document).on("click", function(){
-        $(".popup-notification-wrapper").hide();
+        $(".popup-notification").hide();
     });
 });
