@@ -64,3 +64,25 @@ $(document).ready(function(){
         $(".popup-notification").hide();
     });
 });
+
+// esc keyup
+$(document).ready(function(){
+    // ak sa klikne tlačítkom esc ...
+    $(document).keyup(function(e) {
+
+        // ... a ak to tlačítko je esc (27)...
+        if (e.keyCode == 27) {
+            // ... schovaj action-popup
+            $(".action-wrapper").removeClass("active");
+
+            // ... schovaj overlay
+            $(".overlay").hide();
+
+            // schovaj popup-story
+            $(".popup-story").hide();
+
+            // schovaj popup-notification
+            $(".popup-notification").hide();
+        }
+    });
+});
